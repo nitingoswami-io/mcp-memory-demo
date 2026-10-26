@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "personal-memory": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "/absolute/path/to/mcp-demo",
+        "run",
+        "server.py"
+      ]
+    }
+  }
+}

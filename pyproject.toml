@@ -1,0 +1,19 @@
+[project]
+name = "mcp-memory-demo"
+version = "0.1.0"
+description = "A RAG-based personal memory MCP server, powered by FastMCP and ChromaDB."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Nitin Goswami" }]
+keywords = ["mcp", "rag", "memory", "llm", "anthropic", "claude"]
+dependencies = [
+    "mcp[cli]>=2.0.0",
+    "chromadb>=1.0.0",
+]
+
+[project.scripts]
+mcp-memory-demo = "server:main"
+
+[tool.uv]
+package = false
