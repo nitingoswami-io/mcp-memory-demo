@@ -12,8 +12,5 @@ dependencies = [
     "chromadb>=1.0.0",
 ]
 
-[project.scripts]
-mcp-memory-demo = "server:main"
-
 [tool.uv]
 package = false

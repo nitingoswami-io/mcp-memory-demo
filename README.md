@@ -79,6 +79,43 @@ Or over streamable HTTP, for remote clients:
 uv run server.py --http
 ```
 
+## Testing locally
+
+Three ways to test the server without connecting a real LLM client.
+
+**1. Automated smoke test** — spawns the server, speaks MCP over stdio, and exercises every tool. Non-zero exit on any failure.
+
+```bash
+uv run test_server.py
+```
+
+Expected:
+
+```
+[OK] initialize
+[OK] tools/list -> ['forget', 'list_recent', 'recall', 'remember']
+[OK] remember    -> id=206da318...
+[OK] recall      -> top score=0.7564
+[OK] list_recent -> 5 memories, newest first
+[OK] forget      -> 206da318... deleted
+
+All smoke tests passed.
+```
+
+**2. Interactive browser UI (MCP Inspector)** — a web app to click through tools and resources, inspect their schemas, and see live responses.
+
+```bash
+uv run mcp dev server.py
+```
+
+Opens the Inspector at `http://localhost:5173`. Click **Connect**, pick a tool, fill in arguments, hit **Call Tool**.
+
+**3. The RAG pipeline on its own, bypassing MCP** — useful when iterating on retrieval quality.
+
+```bash
+uv run seed.py
+```
+
 ## Hooking it up to Claude Desktop
 
 Edit `~/Library/Application Support/Claude/claude_desktop_config.json`
