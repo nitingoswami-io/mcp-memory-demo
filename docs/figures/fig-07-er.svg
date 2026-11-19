@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 230" role="img" aria-label="Entity-relationship diagram: one Chroma collection, personal_memory, using cosine distance, contains many memory records, each with a uuid id, the text, a 384-dimension embedding and created_at, tags and source metadata. The record is highlighted." class="sketch" font-family="Kalam, 'Segoe Print', 'Comic Sans MS', cursive" font-size="13" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+<style>/* standalone viewing only — stripped when the figure is inlined into a page */
+svg{color:#17202b} .sk-bg{fill:#ffffff} .sk-fill{fill:#e3f2ef} .sk-accent{stroke:#0f766e} text.sk-accent{fill:#0f766e;stroke:none}
+@media (prefers-color-scheme:dark){svg{color:#e4e9ef} .sk-bg{fill:#161d25} .sk-fill{fill:#15302d} .sk-accent{stroke:#4fd1c0} text.sk-accent{fill:#4fd1c0}}
+</style>
+<defs>
+<filter id="rough" x="-3%" y="-3%" width="106%" height="106%"><feTurbulence type="fractalNoise" baseFrequency="0.022" numOctaves="2" seed="9" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.6" xChannelSelector="R" yChannelSelector="G"/></filter>
+<marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1.5 1.5 L8.5 5 L1.5 8.5" fill="none" stroke="currentColor" stroke-width="1.4"/></marker>
+<marker id="arrow-accent" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path class="sk-accent" d="M1.5 1.5 L8.5 5 L1.5 8.5" fill="none" stroke="currentColor" stroke-width="1.4"/></marker>
+</defs>
+<g filter="url(#rough)">
+  <rect x="20" y="30" width="260" height="96" rx="4"/>
+  <path d="M20 58 H280"/>
+  <rect x="420" y="30" width="340" height="176" rx="4" class="sk-accent"/>
+  <path class="sk-accent" d="M420 58 H760"/>
+  <path d="M280 80 L420 80"/>
+  <path d="M292 72 V88 M298 72 V88"/>
+  <path d="M420 72 L406 80 L420 88 M400 72 V88"/>
+</g>
+<g fill="currentColor" stroke="none">
+  <text x="150" y="49" text-anchor="middle" font-weight="700">collection</text>
+  <text x="30" y="77" text-anchor="start" font-size="11.5">name</text>
+  <text x="270" y="77" text-anchor="end" font-size="11">"personal_memory"</text>
+  <text x="30" y="97" text-anchor="start" font-size="11.5">hnsw:space</text>
+  <text x="270" y="97" text-anchor="end" font-size="11">cosine</text>
+  <text x="30" y="117" text-anchor="start" font-size="11.5">description</text>
+  <text x="270" y="117" text-anchor="end" font-size="11">metadata</text>
+  <text x="590" y="49" text-anchor="middle" font-weight="700" class="sk-accent">memory record</text>
+  <text x="430" y="77" text-anchor="start" font-size="11.5">id</text>
+  <text x="750" y="77" text-anchor="end" font-size="11">PK · uuid4 hex</text>
+  <text x="430" y="97" text-anchor="start" font-size="11.5">document</text>
+  <text x="750" y="97" text-anchor="end" font-size="11">the memory text</text>
+  <text x="430" y="117" text-anchor="start" font-size="11.5">embedding</text>
+  <text x="750" y="117" text-anchor="end" font-size="11">384 dims · MiniLM</text>
+  <text x="430" y="137" text-anchor="start" font-size="11.5">created_at</text>
+  <text x="750" y="137" text-anchor="end" font-size="11">ISO 8601, UTC</text>
+  <text x="430" y="157" text-anchor="start" font-size="11.5">tags</text>
+  <text x="750" y="157" text-anchor="end" font-size="11">comma-joined string</text>
+  <text x="430" y="177" text-anchor="start" font-size="11.5">source</text>
+  <text x="750" y="177" text-anchor="end" font-size="11">"" when none</text>
+  <text x="350" y="72" text-anchor="middle" font-size="12">contains</text>
+  <text x="590" y="198" text-anchor="middle" font-size="11">metadata: created_at · tags · source</text>
+</g>
+</svg>

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 330" role="img" aria-label="Pipeline: an MCP client calls a tool on server.py; the tool calls MemoryStore, which asks Chroma to embed the text with a local MiniLM model and search or write the on-disk HNSW index. The recall path is highlighted." class="sketch" font-family="Kalam, 'Segoe Print', 'Comic Sans MS', cursive" font-size="13" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+<style>/* standalone viewing only — stripped when the figure is inlined into a page */
+svg{color:#17202b} .sk-bg{fill:#ffffff} .sk-fill{fill:#e3f2ef} .sk-accent{stroke:#0f766e} text.sk-accent{fill:#0f766e;stroke:none}
+@media (prefers-color-scheme:dark){svg{color:#e4e9ef} .sk-bg{fill:#161d25} .sk-fill{fill:#15302d} .sk-accent{stroke:#4fd1c0} text.sk-accent{fill:#4fd1c0}}
+</style>
+<defs>
+<filter id="rough" x="-3%" y="-3%" width="106%" height="106%"><feTurbulence type="fractalNoise" baseFrequency="0.022" numOctaves="2" seed="4" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.6" xChannelSelector="R" yChannelSelector="G"/></filter>
+<marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1.5 1.5 L8.5 5 L1.5 8.5" fill="none" stroke="currentColor" stroke-width="1.4"/></marker>
+<marker id="arrow-accent" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path class="sk-accent" d="M1.5 1.5 L8.5 5 L1.5 8.5" fill="none" stroke="currentColor" stroke-width="1.4"/></marker>
+</defs>
+<g filter="url(#rough)">
+  <rect x="20" y="140" width="150" height="48" rx="6"/>
+  <rect x="220" y="30" width="210" height="280" rx="10" stroke-dasharray="7 5" stroke-width="1.2"/>
+  <rect x="250" y="60" width="150" height="34" rx="6"/>
+  <rect x="250" y="108" width="150" height="34" rx="6" class="sk-accent"/>
+  <rect x="250" y="156" width="150" height="34" rx="6"/>
+  <rect x="250" y="204" width="150" height="34" rx="6"/>
+  <rect x="250" y="252" width="150" height="34" rx="6"/>
+  <path d="M170 158 L250 125" class="sk-accent" marker-end="url(#arrow-accent)"/>
+  <rect x="500" y="100" width="170" height="130" rx="10" stroke-dasharray="7 5" stroke-width="1.2"/>
+  <rect x="520" y="140" width="130" height="48" rx="6"/>
+  <path d="M400 125 L520 158" class="sk-accent" marker-end="url(#arrow-accent)"/>
+  <rect x="730" y="140" width="190" height="48" rx="6" class="sk-accent"/>
+  <path d="M650 164 L730 164" class="sk-accent" marker-end="url(#arrow-accent)"/>
+  <rect x="740" y="30" width="170" height="56" rx="6"/>
+  <rect x="744" y="34" width="162" height="48" rx="3"/>
+  <path d="M825 140 L825 86" class="sk-accent" marker-end="url(#arrow-accent)"/>
+  <path class="sk-accent" d="M740 250 A85 9 0 0 0 910 250 A85 9 0 0 0 740 250 V300 A85 9 0 0 0 910 300 V250"/>
+  <path d="M825 188 L825 240" class="sk-accent" marker-end="url(#arrow-accent)"/>
+</g>
+<g fill="currentColor" stroke="none">
+  <text x="95" y="162" text-anchor="middle">MCP client</text>
+  <text x="95" y="177" text-anchor="middle" font-size="11">Claude Desktop · Cursor</text>
+  <text x="232" y="50" text-anchor="start" font-size="12" font-weight="700">server.py · MCPServer</text>
+  <text x="325" y="81" text-anchor="middle">remember</text>
+  <text x="325" y="129" text-anchor="middle" class="sk-accent">recall</text>
+  <text x="325" y="177" text-anchor="middle">list_recent</text>
+  <text x="325" y="225" text-anchor="middle">forget</text>
+  <text x="325" y="273" text-anchor="middle">memory://stats</text>
+  <text x="325" y="300" text-anchor="middle" font-size="11">stdio · or HTTP :8000/mcp</text>
+  <rect class="sk-bg" x="162.5" y="116" width="75" height="17" rx="3"/>
+  <text x="200" y="128" text-anchor="middle" font-size="12" class="sk-accent">tools/call</text>
+  <text x="512" y="120" text-anchor="start" font-size="12" font-weight="700">memory_store.py</text>
+  <text x="585" y="162" text-anchor="middle">MemoryStore</text>
+  <text x="585" y="177" text-anchor="middle" font-size="11">add · search · list</text>
+  <rect class="sk-bg" x="427" y="154" width="62" height="17" rx="3"/>
+  <text x="458" y="166" text-anchor="middle" font-size="12" class="sk-accent">search()</text>
+  <text x="825" y="162" text-anchor="middle" class="sk-accent">Chroma client</text>
+  <text x="825" y="177" text-anchor="middle" font-size="11" class="sk-accent">PersistentClient</text>
+  <rect class="sk-bg" x="669" y="146" width="42" height="17" rx="3"/>
+  <text x="690" y="158" text-anchor="middle" font-size="12" class="sk-accent">query</text>
+  <text x="825" y="56" text-anchor="middle">all-MiniLM-L6-v2</text>
+  <text x="825" y="71" text-anchor="middle" font-size="11">ONNX · 384 dims</text>
+  <rect class="sk-bg" x="841" y="105" width="42" height="17" rx="3"/>
+  <text x="862" y="117" text-anchor="middle" font-size="12" class="sk-accent">embed</text>
+  <text x="825" y="279" text-anchor="middle" class="sk-accent">./data/chroma</text>
+  <text x="825" y="294" text-anchor="middle" font-size="11" class="sk-accent">cosine HNSW</text>
+  <rect class="sk-bg" x="849" y="206" width="42" height="17" rx="3"/>
+  <text x="870" y="218" text-anchor="middle" font-size="12" class="sk-accent">top-k</text>
+</g>
+</svg>

@@ -1,0 +1,6 @@
+blank_issues_enabled: true
+# Add a Discussions link here once Discussions are enabled on the repo:
+# contact_links:
+#   - name: Questions and discussion
+#     url: https://github.com/nitingoswami-io/mcp-memory-demo/discussions
+#     about: Ask how something works, or share what you built with it.

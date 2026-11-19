@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 540" role="img" aria-label="Sequence: recall. The client calls the recall tool; MemoryStore asks Chroma to embed the query and run a cosine nearest-neighbour search, turns distances into scores, applies the optional tag filter and returns the top matches. The embed-and-search steps are highlighted." class="sketch" font-family="Kalam, 'Segoe Print', 'Comic Sans MS', cursive" font-size="13" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+<style>/* standalone viewing only — stripped when the figure is inlined into a page */
+svg{color:#17202b} .sk-bg{fill:#ffffff} .sk-fill{fill:#e3f2ef} .sk-accent{stroke:#0f766e} text.sk-accent{fill:#0f766e;stroke:none}
+@media (prefers-color-scheme:dark){svg{color:#e4e9ef} .sk-bg{fill:#161d25} .sk-fill{fill:#15302d} .sk-accent{stroke:#4fd1c0} text.sk-accent{fill:#4fd1c0}}
+</style>
+<defs>
+<filter id="rough" x="-3%" y="-3%" width="106%" height="106%"><feTurbulence type="fractalNoise" baseFrequency="0.022" numOctaves="2" seed="7" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.6" xChannelSelector="R" yChannelSelector="G"/></filter>
+<marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1.5 1.5 L8.5 5 L1.5 8.5" fill="none" stroke="currentColor" stroke-width="1.4"/></marker>
+<marker id="arrow-accent" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path class="sk-accent" d="M1.5 1.5 L8.5 5 L1.5 8.5" fill="none" stroke="currentColor" stroke-width="1.4"/></marker>
+</defs>
+<g filter="url(#rough)">
+  <circle cx="50" cy="19" r="9"/>
+  <path d="M50 28 V52 M35 38 H65 M50 52 L38 68 M50 52 L62 68"/>
+  <path d="M50 94 V520" stroke-dasharray="3 6" stroke-width="1"/>
+  <rect x="128" y="24" width="94" height="34" rx="6"/>
+  <path d="M175 58 V520" stroke-dasharray="3 6" stroke-width="1"/>
+  <rect x="261" y="24" width="138" height="34" rx="6"/>
+  <path d="M330 58 V520" stroke-dasharray="3 6" stroke-width="1"/>
+  <rect x="423.5" y="24" width="153" height="34" rx="6"/>
+  <path d="M500 58 V520" stroke-dasharray="3 6" stroke-width="1"/>
+  <rect x="607" y="24" width="146" height="34" rx="6"/>
+  <path d="M680 58 V520" stroke-dasharray="3 6" stroke-width="1"/>
+  <rect x="812" y="24" width="116" height="34" rx="6"/>
+  <path d="M870 58 V520" stroke-dasharray="3 6" stroke-width="1"/>
+  <path d="M54 116 L171 116" marker-end="url(#arrow)"/>
+  <path d="M179 146 L326 146" marker-end="url(#arrow)"/>
+  <path d="M334 176 L496 176" marker-end="url(#arrow)"/>
+  <path d="M500 200 L526 200 L526 212 L503 212" marker-end="url(#arrow)"/>
+  <path d="M504 236 L676 236" class="sk-accent" marker-end="url(#arrow-accent)"/>
+  <path d="M684 266 L866 266" class="sk-accent" marker-end="url(#arrow-accent)"/>
+  <path d="M866 296 L684 296" class="sk-accent" stroke-dasharray="6 5" marker-end="url(#arrow-accent)"/>
+  <path d="M680 320 L706 320 L706 332 L683 332" class="sk-accent" marker-end="url(#arrow-accent)"/>
+  <path d="M676 356 L504 356" class="sk-accent" stroke-dasharray="6 5" marker-end="url(#arrow-accent)"/>
+  <path d="M500 380 L526 380 L526 392 L503 392" marker-end="url(#arrow)"/>
+  <path d="M496 416 L334 416" stroke-dasharray="6 5" marker-end="url(#arrow)"/>
+  <path d="M326 446 L179 446" stroke-dasharray="6 5" marker-end="url(#arrow)"/>
+  <path d="M171 476 L54 476" stroke-dasharray="6 5" marker-end="url(#arrow)"/>
+</g>
+<g fill="currentColor" stroke="none">
+  <text x="50" y="86" text-anchor="middle">You</text>
+  <text x="175" y="45" text-anchor="middle">MCP client</text>
+  <text x="330" y="45" text-anchor="middle">server.py recall</text>
+  <text x="500" y="45" text-anchor="middle">MemoryStore.search</text>
+  <text x="680" y="45" text-anchor="middle">Chroma collection</text>
+  <text x="870" y="45" text-anchor="middle">MiniLM (ONNX)</text>
+  <rect class="sk-bg" x="11.5" y="97" width="202" height="17" rx="3"/>
+  <text x="112.5" y="109" text-anchor="middle" font-size="12">1  “What should I read next?”</text>
+  <rect class="sk-bg" x="121" y="127" width="263" height="17" rx="3"/>
+  <text x="252.5" y="139" text-anchor="middle" font-size="12">2  tools/call recall {query, limit: 5}</text>
+  <rect class="sk-bg" x="314" y="157" width="202" height="17" rx="3"/>
+  <text x="415" y="169" text-anchor="middle" font-size="12">3  search(query, limit, tags)</text>
+  <rect class="sk-bg" x="530" y="198" width="303" height="17" rx="3"/>
+  <text x="534" y="210" text-anchor="start" font-size="12">4  n = limit, or limit × 5 (≤ 100) with tags</text>
+  <rect class="sk-bg" x="465.5" y="217" width="249" height="17" rx="3"/>
+  <text x="590" y="229" text-anchor="middle" font-size="12" class="sk-accent">5  query(query_texts, n_results = n)</text>
+  <rect class="sk-bg" x="724" y="247" width="102" height="17" rx="3"/>
+  <text x="775" y="259" text-anchor="middle" font-size="12" class="sk-accent">6  embed query</text>
+  <rect class="sk-bg" x="714" y="277" width="122" height="17" rx="3"/>
+  <text x="775" y="289" text-anchor="middle" font-size="12" class="sk-accent">7  384-dim vector</text>
+  <rect class="sk-bg" x="710" y="318" width="176" height="17" rx="3"/>
+  <text x="714" y="330" text-anchor="start" font-size="12" class="sk-accent">8  cosine HNSW, nearest n</text>
+  <rect class="sk-bg" x="455.5" y="337" width="269" height="17" rx="3"/>
+  <text x="590" y="349" text-anchor="middle" font-size="12" class="sk-accent">9  ids, documents, metadatas, distances</text>
+  <rect class="sk-bg" x="530" y="378" width="283" height="17" rx="3"/>
+  <text x="534" y="390" text-anchor="start" font-size="12">10  score = 1 − distance; tag filter; cut</text>
+  <rect class="sk-bg" x="304" y="397" width="222" height="17" rx="3"/>
+  <text x="415" y="409" text-anchor="middle" font-size="12">11  [{id, content, tags, score}]</text>
+  <rect class="sk-bg" x="175" y="427" width="155" height="17" rx="3"/>
+  <text x="252.5" y="439" text-anchor="middle" font-size="12">12  tool result (JSON)</text>
+  <rect class="sk-bg" x="-2" y="457" width="229" height="17" rx="3"/>
+  <text x="112.5" y="469" text-anchor="middle" font-size="12">13  answer that uses the memories</text>
+</g>
+</svg>

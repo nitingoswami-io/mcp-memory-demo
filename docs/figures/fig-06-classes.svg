@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 380" role="img" aria-label="Class diagram: server.py exposes four tools and one resource and delegates each to MemoryStore; seed.py also uses MemoryStore; MemoryStore wraps a Chroma collection and flattens results with two private helpers. The search dependency is highlighted." class="sketch" font-family="Kalam, 'Segoe Print', 'Comic Sans MS', cursive" font-size="13" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+<style>/* standalone viewing only — stripped when the figure is inlined into a page */
+svg{color:#17202b} .sk-bg{fill:#ffffff} .sk-fill{fill:#e3f2ef} .sk-accent{stroke:#0f766e} text.sk-accent{fill:#0f766e;stroke:none}
+@media (prefers-color-scheme:dark){svg{color:#e4e9ef} .sk-bg{fill:#161d25} .sk-fill{fill:#15302d} .sk-accent{stroke:#4fd1c0} text.sk-accent{fill:#4fd1c0}}
+</style>
+<defs>
+<filter id="rough" x="-3%" y="-3%" width="106%" height="106%"><feTurbulence type="fractalNoise" baseFrequency="0.022" numOctaves="2" seed="8" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.6" xChannelSelector="R" yChannelSelector="G"/></filter>
+<marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1.5 1.5 L8.5 5 L1.5 8.5" fill="none" stroke="currentColor" stroke-width="1.4"/></marker>
+<marker id="arrow-accent" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path class="sk-accent" d="M1.5 1.5 L8.5 5 L1.5 8.5" fill="none" stroke="currentColor" stroke-width="1.4"/></marker>
+</defs>
+<g filter="url(#rough)">
+  <rect x="20" y="20" width="260" height="186" rx="4"/>
+  <path d="M20 48 H280"/>
+  <rect x="20" y="250" width="260" height="78" rx="4"/>
+  <path d="M20 278 H280"/>
+  <rect x="400" y="20" width="400" height="168" rx="4" class="sk-accent"/>
+  <path d="M400 48 H800" class="sk-accent"/>
+  <rect x="400" y="250" width="400" height="78" rx="4"/>
+  <path d="M400 278 H800"/>
+  <path d="M280 120 L400 120" class="sk-accent" marker-end="url(#arrow-accent)"/>
+  <path d="M280 280 L340 280 L340 160 L400 160" marker-end="url(#arrow)"/>
+  <path d="M600 208 L600 250" marker-end="url(#arrow)"/>
+</g>
+<g fill="currentColor" stroke="none">
+  <text x="150" y="39" text-anchor="middle" font-weight="700">server.py</text>
+  <text x="30" y="66" text-anchor="start" font-size="11.5">+mcp: MCPServer("personal-memory")</text>
+  <text x="30" y="84" text-anchor="start" font-size="11.5">+store: MemoryStore</text>
+  <text x="30" y="102" text-anchor="start" font-size="11.5">+remember(content, tags, source)</text>
+  <text x="30" y="120" text-anchor="start" font-size="11.5">+recall(query, limit, tags)</text>
+  <text x="30" y="138" text-anchor="start" font-size="11.5">+list_recent(limit)</text>
+  <text x="30" y="156" text-anchor="start" font-size="11.5">+forget(memory_id)</text>
+  <text x="30" y="174" text-anchor="start" font-size="11.5">+stats()  memory://stats</text>
+  <text x="30" y="192" text-anchor="start" font-size="11.5">+main()  --http → streamable-http</text>
+  <text x="150" y="269" text-anchor="middle" font-weight="700">seed.py</text>
+  <text x="30" y="296" text-anchor="start" font-size="11.5">+SAMPLES: 5 example memories</text>
+  <text x="30" y="314" text-anchor="start" font-size="11.5">+main()</text>
+  <text x="600" y="39" text-anchor="middle" font-weight="700" class="sk-accent">MemoryStore</text>
+  <text x="410" y="66" text-anchor="start" font-size="11.5">+path: Path   (MCP_MEMORY_PATH)</text>
+  <text x="410" y="84" text-anchor="start" font-size="11.5">+collection_name   (MCP_MEMORY_COLLECTION)</text>
+  <text x="410" y="102" text-anchor="start" font-size="11.5">+add(content, tags, source) → id</text>
+  <text x="410" y="120" text-anchor="start" font-size="11.5">+search(query, limit, tags) → list[dict]</text>
+  <text x="410" y="138" text-anchor="start" font-size="11.5">+list_recent(limit) → list[dict]</text>
+  <text x="410" y="156" text-anchor="start" font-size="11.5">+delete(memory_id) → bool</text>
+  <text x="410" y="174" text-anchor="start" font-size="11.5">+stats() → {count, path, collection}</text>
+  <text x="600" y="269" text-anchor="middle" font-weight="700">memory_store.py helpers</text>
+  <text x="410" y="296" text-anchor="start" font-size="11.5">-_flatten_query(result) → dicts with score</text>
+  <text x="410" y="314" text-anchor="start" font-size="11.5">-_flatten_get(result) → dicts</text>
+  <rect class="sk-bg" x="309" y="101" width="62" height="17" rx="3"/>
+  <text x="340" y="113" text-anchor="middle" font-size="12" class="sk-accent">search()</text>
+  <rect class="sk-bg" x="289" y="262" width="42" height="17" rx="3"/>
+  <text x="310" y="274" text-anchor="middle" font-size="12">add()</text>
+  <rect class="sk-bg" x="619" y="222" width="42" height="17" rx="3"/>
+  <text x="640" y="234" text-anchor="middle" font-size="12">calls</text>
+</g>
+</svg>

@@ -1,0 +1,26 @@
+name: Bug report
+description: Something doesn't work as the README describes.
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did, what you expected, and what you saw instead.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: Please don't attach files containing personal data.
+  - type: input
+    id: env
+    attributes:
+      label: Environment
+      description: Runtime version, OS, and whether this is local or deployed.
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or error messages
+      render: text

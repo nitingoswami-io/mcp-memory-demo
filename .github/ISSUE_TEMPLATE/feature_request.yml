@@ -1,0 +1,15 @@
+name: Idea or improvement
+description: Suggest a provider, an example use case, a doc improvement, or a change.
+labels: [enhancement]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: The idea
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it helps
+      description: Does it make the project easier to learn from, easier to adapt, or more correct?
