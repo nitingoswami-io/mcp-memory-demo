@@ -4,7 +4,7 @@
       "command": "uv",
       "args": [
         "--directory",
-        "/absolute/path/to/mcp-demo",
+        "/absolute/path/to/mcp-memory-demo",
         "run",
         "server.py"
       ]

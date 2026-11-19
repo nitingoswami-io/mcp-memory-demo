@@ -1,7 +1,7 @@
 [project]
 name = "mcp-memory-demo"
 version = "0.1.0"
-description = "A RAG-based personal memory MCP server, powered by FastMCP and ChromaDB."
+description = "Learning template: a local, RAG-backed personal memory exposed to LLM clients as an MCP server (MCP Python SDK + ChromaDB)."
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
@@ -11,6 +11,17 @@ dependencies = [
     "mcp[cli]>=2.0.0",
     "chromadb>=1.0.0",
 ]
+
+[project.urls]
+Repository = "https://github.com/nitingoswami-io/mcp-memory-demo"
+Issues = "https://github.com/nitingoswami-io/mcp-memory-demo/issues"
+
+[dependency-groups]
+dev = ["pytest>=8.0"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
 
 [tool.uv]
 package = false

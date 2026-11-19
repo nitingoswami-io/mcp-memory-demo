@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 360" role="img" aria-label="Deployment view: on one computer, the MCP client spawns server.py as a subprocess over stdio; the server reads and writes ./data/chroma and loads the MiniLM model cached in ~/.cache/chroma, which is downloaded once. HTTP mode listens on 127.0.0.1:8000/mcp. The stdio path is highlighted." class="sketch" font-family="Kalam, 'Segoe Print', 'Comic Sans MS', cursive" font-size="13" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+<style>/* standalone viewing only — stripped when the figure is inlined into a page */
+svg{color:#17202b} .sk-bg{fill:#ffffff} .sk-fill{fill:#e3f2ef} .sk-accent{stroke:#0f766e} text.sk-accent{fill:#0f766e;stroke:none}
+@media (prefers-color-scheme:dark){svg{color:#e4e9ef} .sk-bg{fill:#161d25} .sk-fill{fill:#15302d} .sk-accent{stroke:#4fd1c0} text.sk-accent{fill:#4fd1c0}}
+</style>
+<defs>
+<filter id="rough" x="-3%" y="-3%" width="106%" height="106%"><feTurbulence type="fractalNoise" baseFrequency="0.022" numOctaves="2" seed="5" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.6" xChannelSelector="R" yChannelSelector="G"/></filter>
+<marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1.5 1.5 L8.5 5 L1.5 8.5" fill="none" stroke="currentColor" stroke-width="1.4"/></marker>
+<marker id="arrow-accent" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path class="sk-accent" d="M1.5 1.5 L8.5 5 L1.5 8.5" fill="none" stroke="currentColor" stroke-width="1.4"/></marker>
+</defs>
+<g filter="url(#rough)">
+  <rect x="20" y="20" width="820" height="320" rx="10" stroke-dasharray="7 5" stroke-width="1.2"/>
+  <rect x="50" y="70" width="170" height="48" rx="6"/>
+  <rect x="360" y="50" width="260" height="150" rx="10" stroke-dasharray="7 5" stroke-width="1.2"/>
+  <rect x="390" y="90" width="200" height="48" rx="6" class="sk-accent"/>
+  <path d="M220 94 L390 108" class="sk-accent" marker-end="url(#arrow-accent)"/>
+  <rect x="50" y="160" width="170" height="48" rx="6"/>
+  <path d="M220 184 L390 126" stroke-dasharray="6 5" marker-end="url(#arrow)"/>
+  <path d="M390 250 A100 9 0 0 0 590 250 A100 9 0 0 0 390 250 V300 A100 9 0 0 0 590 300 V250"/>
+  <path d="M490 138 L490 240" marker-end="url(#arrow)"/>
+  <rect x="640" y="250" width="180" height="56" rx="6"/>
+  <path d="M590 120 L730 120 L730 250" marker-end="url(#arrow)"/>
+</g>
+<g fill="currentColor" stroke="none">
+  <text x="32" y="40" text-anchor="start" font-size="12" font-weight="700">Your computer</text>
+  <text x="135" y="92" text-anchor="middle">MCP client</text>
+  <text x="135" y="107" text-anchor="middle" font-size="11">Claude Desktop, Cursor…</text>
+  <text x="372" y="70" text-anchor="start" font-size="12" font-weight="700">Python 3.10+ · uv venv</text>
+  <text x="490" y="112" text-anchor="middle" class="sk-accent">server.py</text>
+  <text x="490" y="127" text-anchor="middle" font-size="11" class="sk-accent">stdio  |  127.0.0.1:8000/mcp</text>
+  <rect class="sk-bg" x="239" y="78" width="102" height="17" rx="3"/>
+  <text x="290" y="90" text-anchor="middle" font-size="12" class="sk-accent">spawns · stdio</text>
+  <text x="135" y="182" text-anchor="middle">Other MCP client</text>
+  <text x="135" y="197" text-anchor="middle" font-size="11">local agent, script</text>
+  <rect class="sk-bg" x="235" y="174" width="102" height="17" rx="3"/>
+  <text x="286" y="186" text-anchor="middle" font-size="12">HTTP POST /mcp</text>
+  <text x="490" y="279" text-anchor="middle">./data/chroma</text>
+  <text x="490" y="294" text-anchor="middle" font-size="11">MCP_MEMORY_PATH</text>
+  <rect class="sk-bg" x="494" y="212" width="88" height="17" rx="3"/>
+  <text x="538" y="224" text-anchor="middle" font-size="12">read / write</text>
+  <text x="730" y="276" text-anchor="middle">~/.cache/chroma</text>
+  <text x="730" y="291" text-anchor="middle" font-size="11">onnx_models · 79.3 MB</text>
+  <rect class="sk-bg" x="630.5" y="102" width="75" height="17" rx="3"/>
+  <text x="668" y="114" text-anchor="middle" font-size="12">load model</text>
+</g>
+</svg>
